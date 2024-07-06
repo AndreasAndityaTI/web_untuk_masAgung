@@ -193,6 +193,8 @@
                                         <select name="satuan" class="form-control" required>
                                             <option value="#">Pilih Satuan</option>
                                             <option value="PCS">PCS</option>
+                                            <option value="Box">Box</option>
+
                                         </select>
                                     </td>
                                 </tr>

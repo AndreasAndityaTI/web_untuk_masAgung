@@ -148,6 +148,8 @@
 								<th style="width:10%;"> Total</th>
 								<th> Kasir</th>
 								<th> Tanggal Input</th>
+								<th> Aksi</th>
+
 							</tr>
 						</thead>
 						<tbody>
@@ -187,6 +189,13 @@
 								<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
 								<td><?php echo $isi['nm_member'];?></td>
 								<td><?php echo $isi['tanggal_input'];?></td>
+								<td>
+								<a href="fungsi/hapus/hapus.php?laporan=hapus&id_nota=<?php echo $isi['id_nota'];?>" 
+   onclick="return confirm('Hapus Data Nota ?');">
+   <button class="btn btn-danger">Hapus</button>
+</a>
+
+								</td>
 							</tr>
 							<?php $no++; }?>
 						</tbody>
@@ -199,7 +208,10 @@
 								<th style="background:#0bb365;color:#fff;">Keuntungan</th>
 								<th style="background:#0bb365;color:#fff;">
 									Rp.<?php echo number_format($bayar-$modal);?>,-</th>
-							</tr>
+									<th>
+
+								</th>
+								</tr>
 						</tfoot>
 					</table>
 				</div>

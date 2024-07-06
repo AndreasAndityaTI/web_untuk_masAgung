@@ -45,6 +45,8 @@ if (!empty($_SESSION['admin'])) {
     }
 
     if (!empty(htmlentities($_GET['penjualan']))) {
+
+
         $sql = 'DELETE FROM penjualan';
         $row = $config -> prepare($sql);
         $row -> execute();
@@ -52,9 +54,22 @@ if (!empty($_SESSION['admin'])) {
     }
     
     if (!empty(htmlentities($_GET['laporan']))) {
-        $sql = 'DELETE FROM nota';
-        $row = $config -> prepare($sql);
-        $row -> execute();
-        echo '<script>window.location="../../index.php?page=laporan&remove=hapus"</script>';
+        $id = htmlentities($_GET['id_nota']);
+        
+        // Debugging: Log received parameters
+        error_log("Received id_nota: $id");
+
+        $data[] = $id;
+        $sql = 'DELETE FROM nota WHERE id_nota=?';
+        $row = $config->prepare($sql);
+        
+        if ($row->execute($data)) {
+            // Debugging: Log successful execution
+            error_log("Successfully deleted record with id_nota: $id");
+            echo '<script>window.location="../../index.php?page=laporan&remove=hapus"</script>';
+        } else {
+            // Debugging: Log failure
+            error_log("Failed to delete record with id_nota: $id");
+        }
     }
 }

@@ -11,7 +11,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-cash-register"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">POS Codekop<sup></sup></div>
+        <div class="sidebar-brand-text mx-3"><sup></sup></div>
     </a>
 
     <!-- Divider -->
@@ -68,6 +68,12 @@
             <span>Pengaturan Toko</span></a>
     </li>
     <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <li class="nav-item active">
+        <center><img src="assets/foto/Tampilan_depan_toko.jpeg" alt="Tampilan toko" style="width:90%;height:90%;"></center>
+
+    </li>
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->
